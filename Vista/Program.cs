@@ -16,7 +16,7 @@ namespace Vista
         {   
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new materias());
+            Application.Run(new documentosEstadia1._1.Form1());
         }
     }
 }
