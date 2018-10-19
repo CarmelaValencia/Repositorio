@@ -16,6 +16,7 @@ namespace Vista.Vistas
             this.lista.DefaultCellStyle.SelectionBackColor = Color.Orange;
             ControlVistaMateria controlVistas = new ControlVistaMateria();
             controlVistas.iniciarMaterias(this);
+            flowLayoutPanel1.Visible = false;
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)
@@ -31,6 +32,8 @@ namespace Vista.Vistas
             flowLayoutPanel1.Height = this.Height;
             flowLayoutPanel1.Controls.Add(agm);
             flowLayoutPanel1.Visible = true;
+            agm.Width = flowLayoutPanel1.Width - 10;
+            agm.Height = flowLayoutPanel1.Height - 10;
         }
 
         private void flowLayoutPanel1_Resize(object sender, EventArgs e)
@@ -53,6 +56,8 @@ namespace Vista.Vistas
             flowLayoutPanel1.Width = this.Width;
             flowLayoutPanel1.Height = this.Height;
             flowLayoutPanel1.Controls.Add(agm);
+            agm.Width = flowLayoutPanel1.Width - 10;
+            agm.Height = flowLayoutPanel1.Height - 10;
         }
     }
 }
