@@ -54,6 +54,7 @@ namespace documentosEstadia1._1
             //MessageBox.Show(flowLayoutPanel2.Size.Width+"----"+ flowLayoutPanel2.Size.Height);
             agregarTamanio(doc);
             agregarTamanio(mat);
+            agregarTamanio(grp);
         }
 
         public void agregarTamanio(Form frm) {
