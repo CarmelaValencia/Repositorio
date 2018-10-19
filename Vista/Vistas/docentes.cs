@@ -25,6 +25,7 @@ namespace documentosEstadia1._1
             flowLayoutPanel1.Visible = false;
             ControlVistaDocente controlVistaDocente = new ControlVistaDocente();
             controlVistaDocente.iniciarDocentes(this);
+            asignarTamanioVentanaResponsivo(agd);
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)
@@ -40,6 +41,7 @@ namespace documentosEstadia1._1
             flowLayoutPanel1.Width = this.Width;
             flowLayoutPanel1.Height = this.Height;
             flowLayoutPanel1.Controls.Add(agd);
+            asignarTamanioVentanaResponsivo(agd);
         }
 
         private void flowLayoutPanel1_Resize(object sender, EventArgs e)
@@ -61,7 +63,14 @@ namespace documentosEstadia1._1
             agd.Visible = true;
             flowLayoutPanel1.Width = this.Width;
             flowLayoutPanel1.Height = this.Height;
+            asignarTamanioVentanaResponsivo(agd);
             flowLayoutPanel1.Controls.Add(agd);
+        }
+
+        public void asignarTamanioVentanaResponsivo(Form frm)
+        {
+            frm.Width = flowLayoutPanel1.Width - 10;
+            frm.Height = flowLayoutPanel1.Height - 10;
         }
     }
 }
