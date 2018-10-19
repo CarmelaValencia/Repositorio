@@ -122,6 +122,7 @@
             this.btn_agregar.TabIndex = 28;
             this.btn_agregar.Text = "AGREGAR";
             this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // lista
             // 

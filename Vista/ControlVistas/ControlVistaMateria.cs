@@ -28,7 +28,7 @@ namespace Vista.ControlVistas
         public void iniciarMaterias(materias vistaMateria) {
             vistaMateriaObj = vistaMateria;
             rellenarTabla();
-            vistaMateriaObj.btn_agregar.Click += new EventHandler(btn_Add);
+            //vistaMateriaObj.btn_agregar.Click += new EventHandler(btn_Add);
             vistaMateriaObj.btn_eliminar.Click += new EventHandler(btn_Delete);
             vistaMateriaObj.btn_modificar.Click += new EventHandler(btn_Update_Click);
             vistaMateriaObj.txt_buscar.TextChanged += new EventHandler(buscando);
@@ -51,7 +51,7 @@ namespace Vista.ControlVistas
             mdloMateria.Total_horas = 100;
             mdloMateria.Horas_semana = 5;
             mdloMateria.Ciclo = "2018B";
-            agregarmaterias agregarmateriasobj = new agregarmaterias();
+            agregarmaterias agregarmateriasobj = new agregarmaterias(new FlowLayoutPanel());
             ControlVistaMateria.opcion= "Modificar";
             agregarmateriasobj.txt_nombre_materias.Text = mdloMateria.NombreMateria;
             agregarmateriasobj.txt_total_horas.Text =mdloMateria.Total_horas.ToString();
@@ -60,12 +60,12 @@ namespace Vista.ControlVistas
             agregarmateriasobj.Show();
         }
 
-        private void btn_Add(object sender, EventArgs e)
+        /*private void btn_Add(object sender, EventArgs e)
         {
-            agregarmaterias agregarmateriasobj = new agregarmaterias();
+            agregarmaterias agregarmateriasobj = new agregarmaterias(new FlowLayoutPanel());
             ControlVistaMateria.opcion = "Registrar";
             agregarmateriasobj.Show();
-        }
+        }*/
 
         private void btn_Delete(object sender, EventArgs e)
         {
