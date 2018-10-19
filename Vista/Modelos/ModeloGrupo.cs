@@ -9,12 +9,12 @@ namespace Vista.Modelos
     public class ModeloGrupo
     {
         private int id_grupos;
-        private String area;
         private int semestre;
         private String nombre_grupos;
+        private String area;
         private String estado;
 
-        public ModeloGrupo(int id_grupos, string area, int semestre, string nombre_grupos, string estado)
+        public ModeloGrupo(int id_grupos,int semestre, string nombre_grupos, string area, string estado)
         {
             this.Id_grupos = id_grupos;
             this.Area = area;

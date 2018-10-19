@@ -54,7 +54,7 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_aceptar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelOpcion = new System.Windows.Forms.Label();
             this.pictureBox_icon = new System.Windows.Forms.PictureBox();
             this.pictureBox1_cerrar = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
@@ -384,15 +384,15 @@
             this.btn_aceptar.Text = "  ACEPTAR";
             this.btn_aceptar.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // labelOpcion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 20);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "AGREGAR GRUPO";
+            this.labelOpcion.AutoSize = true;
+            this.labelOpcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOpcion.Location = new System.Drawing.Point(67, 28);
+            this.labelOpcion.Name = "labelOpcion";
+            this.labelOpcion.Size = new System.Drawing.Size(168, 20);
+            this.labelOpcion.TabIndex = 39;
+            this.labelOpcion.Text = "AGREGAR GRUPO";
             // 
             // pictureBox_icon
             // 
@@ -424,7 +424,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_aceptar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelOpcion);
             this.Controls.Add(this.pictureBox_icon);
             this.Controls.Add(this.pictureBox1_cerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -483,8 +483,8 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         public System.Windows.Forms.Button btn_cancelar;
         public System.Windows.Forms.Button btn_aceptar;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox_icon;
         private System.Windows.Forms.PictureBox pictureBox1_cerrar;
+        public System.Windows.Forms.Label labelOpcion;
     }
 }

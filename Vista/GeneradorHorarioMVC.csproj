@@ -56,6 +56,7 @@
     <Compile Include="ControladorDB\ControlGrupo.cs" />
     <Compile Include="ControladorDB\ControlMateria.cs" />
     <Compile Include="ControlVistas\ControlVistaDocente.cs" />
+    <Compile Include="ControlVistas\ControlVistaGrupo.cs" />
     <Compile Include="ControlVistas\ControlVistaMateria.cs" />
     <Compile Include="Database\Conexion.cs" />
     <Compile Include="Database\DatabaseDocente.cs" />
