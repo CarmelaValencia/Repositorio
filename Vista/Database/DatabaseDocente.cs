@@ -107,20 +107,13 @@ namespace Vista.Database
             }
         }
 
-        public DataTable Consultar(String buscar)
+        public SQLiteDataAdapter Consultar(String buscar)
         {
             cn = Conexion.Instance.Conectar();
             /*Creamos el objeto y le pasamos la consulta*/
             da = new SQLiteDataAdapter("select * from docentes where nombre_docentes like'%" + buscar + "%' " +
                 " or apellidos like'%" + buscar + "%' ", cn);
-            /*Creamos el modelo de una tabla*/
-            DataTable dt = new DataTable();
-            dt.Columns.Add("NOMBRE"); dt.Columns.Add("APELLIDOS"); dt.Columns.Add("NÚMERO DE HORAS"); dt.Columns.Add("ESTADO");
-            dt.Rows.Add(da);
-            /*Rellenamos el modelo de la tabla con los datos de la consulta*/
-           // da.Fill(dt);
-            /*Pasamos los datos del modelo al datagrid view de la vista*/
-            return dt;
+            return da;
         }
     }
 }

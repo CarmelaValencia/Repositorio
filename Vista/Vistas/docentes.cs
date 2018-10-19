@@ -1,13 +1,8 @@
 ﻿using documentosEstadia1._1.Vistas;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vista.ControlVistas;
 
 namespace documentosEstadia1._1
 {
@@ -20,7 +15,7 @@ namespace documentosEstadia1._1
             this.lista.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12);
             this.lista.DefaultCellStyle.SelectionForeColor = Color.White;
             this.lista.DefaultCellStyle.SelectionBackColor = Color.Orange;
-            lista.Rows.Add("TextBox1.Text", "TextBox2.Text", "Textbox3.TExt");
+            //lista.Rows.Add("TextBox1.Text", "TextBox2.Text", "Textbox3.TExt");
 
             agd = new agregardocentes(flowLayoutPanel1,-1);
             agd.TopLevel = false;
@@ -29,6 +24,8 @@ namespace documentosEstadia1._1
             flowLayoutPanel1.Height = this.Height;
             flowLayoutPanel1.Controls.Add(agd);
             flowLayoutPanel1.Visible = false;
+            ControlVistaDocente controlVistaDocente = new ControlVistaDocente();
+            controlVistaDocente.iniciarDocentes(this);
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)
@@ -40,6 +37,15 @@ namespace documentosEstadia1._1
         {
             agd.Width = flowLayoutPanel1.Width-10;
             agd.Height = flowLayoutPanel1.Height-10;
+        }
+
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+            ControlVistaDocente.opcion = "Modificar";
+            Console.WriteLine("evento estable opcion:" + ControlVistaDocente.opcion);
+            ControlVistaDocente controlVistaDocente = new ControlVistaDocente();
+            controlVistaDocente.iniciarAgregarDocentes(new agregardocentes(flowLayoutPanel1, -1));
+            flowLayoutPanel1.Visible = true;
         }
     }
 }
