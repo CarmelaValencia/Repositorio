@@ -10,6 +10,7 @@ namespace documentosEstadia1._1
         docentes doc;
         materias mat;
         grupos grp;
+        horario hr;
         Point DragCursor;
         Point DragForm;
         bool Dragging;
@@ -22,9 +23,11 @@ namespace documentosEstadia1._1
             doc = new docentes();
             mat = new materias();
             grp = new grupos();
+            hr = new horario();
             bajarNivel(doc);
             bajarNivel(mat);
             bajarNivel(grp);
+            bajarNivel(hr);
         }
 
         public void bajarNivel(Form frm) {
@@ -146,6 +149,7 @@ namespace documentosEstadia1._1
             doc.Visible = true;
             mat.Visible = false;
             grp.Visible = false;
+            hr.Visible = false;
         }
 
         private void button_grupos_Click(object sender, System.EventArgs e)
@@ -154,6 +158,7 @@ namespace documentosEstadia1._1
             doc.Visible = false;
             mat.Visible = false;
             grp.Visible = true;
+            hr.Visible = false;
         }
 
         private void button_materias_Click(object sender, System.EventArgs e)
@@ -161,11 +166,16 @@ namespace documentosEstadia1._1
             doc.Visible = false;
             mat.Visible = true;
             grp.Visible = false;
+            hr.Visible = false;
             seleccionarBtn(3);
         }
 
         private void button_horas_Click(object sender, System.EventArgs e)
         {
+            doc.Visible = false;
+            mat.Visible = false;
+            grp.Visible = false;
+            hr.Visible = true;
             seleccionarBtn(4);
         }
 
