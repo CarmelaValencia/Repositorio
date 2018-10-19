@@ -53,11 +53,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControladorDB\ControlDocente.cs" />
+    <Compile Include="ControladorDB\ControlGrupo.cs" />
     <Compile Include="ControladorDB\ControlMateria.cs" />
     <Compile Include="ControlVistas\ControlVistaDocente.cs" />
     <Compile Include="ControlVistas\ControlVistaMateria.cs" />
     <Compile Include="Database\Conexion.cs" />
     <Compile Include="Database\DatabaseDocente.cs" />
+    <Compile Include="Database\DatabaseGrupo.cs" />
     <Compile Include="Database\DatabaseMateria.cs" />
     <Compile Include="Modelos\ModeloDocente.cs" />
     <Compile Include="Modelos\ModeloGrupo.cs" />
