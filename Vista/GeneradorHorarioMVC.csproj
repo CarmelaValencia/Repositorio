@@ -100,6 +100,12 @@
     <Compile Include="Vistas\grupos.Designer.cs">
       <DependentUpon>grupos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\horario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\horario.Designer.cs">
+      <DependentUpon>horario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\materias.cs">
       <SubType>Form</SubType>
     </Compile>
