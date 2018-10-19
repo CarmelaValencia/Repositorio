@@ -9,6 +9,7 @@ namespace documentosEstadia1._1
     {
         docentes doc;
         materias mat;
+        grupos grp;
         Point DragCursor;
         Point DragForm;
         bool Dragging;
@@ -20,8 +21,10 @@ namespace documentosEstadia1._1
             button_docentes.FlatAppearance.MouseOverBackColor = Color.Black;
             doc = new docentes();
             mat = new materias();
+            grp = new grupos();
             bajarNivel(doc);
             bajarNivel(mat);
+            bajarNivel(grp);
         }
 
         public void bajarNivel(Form frm) {
@@ -141,17 +144,22 @@ namespace documentosEstadia1._1
             seleccionarBtn(1);
             doc.Visible = true;
             mat.Visible = false;
+            grp.Visible = false;
         }
 
         private void button_grupos_Click(object sender, System.EventArgs e)
         {
             seleccionarBtn(2);
+            doc.Visible = false;
+            mat.Visible = false;
+            grp.Visible = true;
         }
 
         private void button_materias_Click(object sender, System.EventArgs e)
         {
             doc.Visible = false;
             mat.Visible = true;
+            grp.Visible = false;
             seleccionarBtn(3);
         }
 
