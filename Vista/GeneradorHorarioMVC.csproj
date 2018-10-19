@@ -60,6 +60,7 @@
     <Compile Include="Database\DatabaseDocente.cs" />
     <Compile Include="Database\DatabaseMateria.cs" />
     <Compile Include="Modelos\ModeloDocente.cs" />
+    <Compile Include="Modelos\ModeloGrupo.cs" />
     <Compile Include="Modelos\ModeloMateria.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

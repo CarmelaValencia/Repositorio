@@ -10,8 +10,6 @@ namespace Vista.Vistas
         public agregarmaterias(FlowLayoutPanel flp)
         {
             InitializeComponent();
-            ControlVistaMateria controlVista = new ControlVistaMateria();
-            controlVista.iniciarAgregarMaterias(this);
             flpo = flp;
         }
 

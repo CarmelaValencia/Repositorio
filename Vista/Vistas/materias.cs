@@ -11,18 +11,20 @@ namespace Vista.Vistas
         public materias()
         {
             InitializeComponent();
-            ControlVistaMateria controlVistas = new ControlVistaMateria();
-            controlVistas.iniciarMaterias(this);
             this.lista.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12);
             this.lista.DefaultCellStyle.SelectionForeColor = Color.White;
             this.lista.DefaultCellStyle.SelectionBackColor = Color.Orange;
-            //agm = new agregarmaterias(flowLayoutPanel1);
+            ControlVistaMateria controlVistas = new ControlVistaMateria();
+            controlVistas.iniciarMaterias(this);
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
+            ControlVistaMateria.opcion = "Registrar";
             flowLayoutPanel1.Controls.Remove(agm);
             agm = new agregarmaterias(flowLayoutPanel1);
+            ControlVistaMateria.cargarValores(agm);
+            agm.labelOpcion.Text = "AGREGAR MATERIA";
             agm.TopLevel = false;
             agm.Visible = true;
             flowLayoutPanel1.Width = this.Width;
@@ -35,6 +37,22 @@ namespace Vista.Vistas
         {
             agm.Width = flowLayoutPanel1.Width - 10;
             agm.Height = flowLayoutPanel1.Height - 10;
+        }
+
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+            ControlVistaMateria.opcion = "Modificar";
+            flowLayoutPanel1.Controls.Remove(agm);
+            flowLayoutPanel1.Visible = true;
+            agm = new agregarmaterias(flowLayoutPanel1);
+            agm.labelOpcion.Text = "MODIFICAR DATOS DE LA MATERIA";
+            ControlVistaMateria.obtenerSeleccion();
+            ControlVistaMateria.cargarValores(agm);
+            agm.TopLevel = false;
+            agm.Visible = true;
+            flowLayoutPanel1.Width = this.Width;
+            flowLayoutPanel1.Height = this.Height;
+            flowLayoutPanel1.Controls.Add(agm);
         }
     }
 }

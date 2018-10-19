@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(agregarmaterias));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_horas_semana = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_nombre_materias = new System.Windows.Forms.TextBox();
@@ -41,6 +42,8 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_ciclo = new System.Windows.Forms.TextBox();
+            this.txt_total_horas = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -51,14 +54,12 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_aceptar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelOpcion = new System.Windows.Forms.Label();
             this.pictureBox_icon = new System.Windows.Forms.PictureBox();
             this.pictureBox1_cerrar = new System.Windows.Forms.PictureBox();
-            this.txt_total_horas = new System.Windows.Forms.NumericUpDown();
-            this.txt_horas_semana = new System.Windows.Forms.NumericUpDown();
-            this.txt_ciclo = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_horas_semana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -66,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_total_horas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -74,8 +76,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1_cerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_total_horas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_horas_semana)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -115,6 +115,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(270, 154);
             this.panel1.TabIndex = 28;
+            // 
+            // txt_horas_semana
+            // 
+            this.txt_horas_semana.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_horas_semana.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_horas_semana.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_horas_semana.Location = new System.Drawing.Point(27, 119);
+            this.txt_horas_semana.Name = "txt_horas_semana";
+            this.txt_horas_semana.Size = new System.Drawing.Size(219, 22);
+            this.txt_horas_semana.TabIndex = 24;
             // 
             // label2
             // 
@@ -229,6 +240,29 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(271, 154);
             this.panel2.TabIndex = 29;
+            // 
+            // txt_ciclo
+            // 
+            this.txt_ciclo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_ciclo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_ciclo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ciclo.Location = new System.Drawing.Point(27, 121);
+            this.txt_ciclo.Name = "txt_ciclo";
+            this.txt_ciclo.Size = new System.Drawing.Size(219, 19);
+            this.txt_ciclo.TabIndex = 26;
+            this.txt_ciclo.TabStop = false;
+            // 
+            // txt_total_horas
+            // 
+            this.txt_total_horas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_total_horas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_total_horas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_total_horas.Location = new System.Drawing.Point(27, 42);
+            this.txt_total_horas.Name = "txt_total_horas";
+            this.txt_total_horas.Size = new System.Drawing.Size(219, 22);
+            this.txt_total_horas.TabIndex = 23;
             // 
             // label3
             // 
@@ -350,15 +384,15 @@
             this.btn_aceptar.Text = "  ACEPTAR";
             this.btn_aceptar.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // labelOpcion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 20);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "AGREGAR MATERIA";
+            this.labelOpcion.AutoSize = true;
+            this.labelOpcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOpcion.Location = new System.Drawing.Point(67, 28);
+            this.labelOpcion.Name = "labelOpcion";
+            this.labelOpcion.Size = new System.Drawing.Size(183, 20);
+            this.labelOpcion.TabIndex = 33;
+            this.labelOpcion.Text = "AGREGAR MATERIA";
             // 
             // pictureBox_icon
             // 
@@ -381,40 +415,6 @@
             this.pictureBox1_cerrar.TabStop = false;
             this.pictureBox1_cerrar.Click += new System.EventHandler(this.pictureBox1_cerrar_Click);
             // 
-            // txt_total_horas
-            // 
-            this.txt_total_horas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_total_horas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_total_horas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_horas.Location = new System.Drawing.Point(27, 42);
-            this.txt_total_horas.Name = "txt_total_horas";
-            this.txt_total_horas.Size = new System.Drawing.Size(219, 22);
-            this.txt_total_horas.TabIndex = 23;
-            // 
-            // txt_horas_semana
-            // 
-            this.txt_horas_semana.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_horas_semana.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_horas_semana.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_horas_semana.Location = new System.Drawing.Point(27, 119);
-            this.txt_horas_semana.Name = "txt_horas_semana";
-            this.txt_horas_semana.Size = new System.Drawing.Size(219, 22);
-            this.txt_horas_semana.TabIndex = 24;
-            // 
-            // txt_ciclo
-            // 
-            this.txt_ciclo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_ciclo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_ciclo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ciclo.Location = new System.Drawing.Point(27, 121);
-            this.txt_ciclo.Name = "txt_ciclo";
-            this.txt_ciclo.Size = new System.Drawing.Size(219, 19);
-            this.txt_ciclo.TabIndex = 26;
-            this.txt_ciclo.TabStop = false;
-            // 
             // agregarmaterias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,7 +424,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_aceptar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelOpcion);
             this.Controls.Add(this.pictureBox_icon);
             this.Controls.Add(this.pictureBox1_cerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -434,6 +434,7 @@
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_horas_semana)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -442,6 +443,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_total_horas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -450,8 +452,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1_cerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_total_horas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_horas_semana)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -484,8 +484,8 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         public System.Windows.Forms.Button btn_cancelar;
         public System.Windows.Forms.Button btn_aceptar;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox_icon;
         private System.Windows.Forms.PictureBox pictureBox1_cerrar;
+        public System.Windows.Forms.Label labelOpcion;
     }
 }
