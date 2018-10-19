@@ -21,6 +21,7 @@ namespace Vista.ControlVistas
         materias vistaMateriaObj = null;
         ModeloMateria mdloMateria = new ModeloMateria(0, "", 0, 0, "");
         ControlMateria controlMateria = new ControlMateria();
+        FlowLayoutPanel fl = new FlowLayoutPanel();
         public ControlVistaMateria(){
 
         }
@@ -28,9 +29,9 @@ namespace Vista.ControlVistas
         public void iniciarMaterias(materias vistaMateria) {
             vistaMateriaObj = vistaMateria;
             rellenarTabla();
-            vistaMateriaObj.btn_agregar.Click += new EventHandler(btn_Add);
+            //vistaMateriaObj.btn_agregar.Click += new EventHandler(btn_Add);
             vistaMateriaObj.btn_eliminar.Click += new EventHandler(btn_Delete);
-            vistaMateriaObj.btn_modificar.Click += new EventHandler(btn_Update_Click);
+            //vistaMateriaObj.btn_modificar.Click += new EventHandler(btn_Update_Click);
             vistaMateriaObj.txt_buscar.TextChanged += new EventHandler(buscando);
         }
         public void rellenarTabla() {
@@ -44,28 +45,28 @@ namespace Vista.ControlVistas
             vistaMateriaObj.lista.DataSource = controlMateria.Consultar(vistaMateriaObj.txt_buscar.Text);
         }
 
-        private void btn_Update_Click(object sender, EventArgs e)
+        /*private void btn_Update_Click(object sender, EventArgs e)
         {
             ControlVistaMateria.id = 5;
             mdloMateria.NombreMateria = "Matematicas";
             mdloMateria.Total_horas = 100;
             mdloMateria.Horas_semana = 5;
             mdloMateria.Ciclo = "2018B";
-            agregarmaterias agregarmateriasobj = new agregarmaterias();
+            agregarmaterias agregarmateriasobj = new agregarmaterias(fl,1);
             ControlVistaMateria.opcion= "Modificar";
             agregarmateriasobj.txt_nombre_materias.Text = mdloMateria.NombreMateria;
             agregarmateriasobj.txt_total_horas.Text =mdloMateria.Total_horas.ToString();
             agregarmateriasobj.txt_horas_semana.Text = mdloMateria.Horas_semana.ToString();
             agregarmateriasobj.txt_ciclo.Text = mdloMateria.Ciclo;
             agregarmateriasobj.Show();
-        }
+        }*/
 
-        private void btn_Add(object sender, EventArgs e)
+        /*private void btn_Add(object sender, EventArgs e)
         {
             agregarmaterias agregarmateriasobj = new agregarmaterias();
             ControlVistaMateria.opcion = "Registrar";
             agregarmateriasobj.Show();
-        }
+        }*/
 
         private void btn_Delete(object sender, EventArgs e)
         {

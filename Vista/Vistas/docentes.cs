@@ -17,10 +17,10 @@ namespace documentosEstadia1._1
         public docentes()
         {
             InitializeComponent();
-            this.dataGridView1.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12);
-            this.dataGridView1.DefaultCellStyle.SelectionForeColor = Color.White;
-            this.dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Orange;
-            dataGridView1.Rows.Add("TextBox1.Text", "TextBox2.Text", "Textbox3.TExt");
+            this.lista.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12);
+            this.lista.DefaultCellStyle.SelectionForeColor = Color.White;
+            this.lista.DefaultCellStyle.SelectionBackColor = Color.Orange;
+            lista.Rows.Add("TextBox1.Text", "TextBox2.Text", "Textbox3.TExt");
 
             agd = new agregardocentes(flowLayoutPanel1,-1);
             agd.TopLevel = false;

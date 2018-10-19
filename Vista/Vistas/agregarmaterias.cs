@@ -13,11 +13,18 @@ namespace Vista.Vistas
 {
     public partial class agregarmaterias : Form
     {
-        public agregarmaterias()
+        FlowLayoutPanel flpo;
+        public agregarmaterias(FlowLayoutPanel flp,int agmd)
         {
             InitializeComponent();
             ControlVistaMateria controlVista = new ControlVistaMateria();
             controlVista.iniciarAgregarMaterias(this);
+            flpo = flp;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            flpo.Visible = false;
         }
     }
 }

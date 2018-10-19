@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using Vista.Vistas;
 
 namespace documentosEstadia1._1
 {
@@ -7,6 +8,7 @@ namespace documentosEstadia1._1
     public partial class Form1 : Form
     {
         docentes doc;
+        materias mat;
         Point DragCursor;
         Point DragForm;
         bool Dragging;
@@ -17,9 +19,15 @@ namespace documentosEstadia1._1
             button_docentes.BackColor = Color.Black;
             button_docentes.FlatAppearance.MouseOverBackColor = Color.Black;
             doc = new docentes();
-            doc.TopLevel = false;
-            doc.Visible = true;
-            flowLayoutPanel2.Controls.Add(doc);
+            mat = new materias();
+            bajarNivel(doc);
+            bajarNivel(mat);
+        }
+
+        public void bajarNivel(Form frm) {
+            frm.TopLevel = false;
+            frm.Visible = true;
+            flowLayoutPanel2.Controls.Add(frm);
         }
 
         private void pictureBox14_Click(object sender, System.EventArgs e)
@@ -40,9 +48,14 @@ namespace documentosEstadia1._1
             {
                 max_min = false;
             }
-            doc.Width = flowLayoutPanel2.Size.Width;
-            doc.Height = flowLayoutPanel2.Size.Height;
             //MessageBox.Show(flowLayoutPanel2.Size.Width+"----"+ flowLayoutPanel2.Size.Height);
+            agregarTamanio(doc);
+            agregarTamanio(mat);
+        }
+
+        public void agregarTamanio(Form frm) {
+            frm.Width = flowLayoutPanel2.Size.Width;
+            frm.Height = flowLayoutPanel2.Size.Height;
         }
 
         private void pictureBox7_Click(object sender, System.EventArgs e)
@@ -126,6 +139,8 @@ namespace documentosEstadia1._1
         private void button_docentes_Click(object sender, System.EventArgs e)
         {
             seleccionarBtn(1);
+            doc.Visible = true;
+            mat.Visible = false;
         }
 
         private void button_grupos_Click(object sender, System.EventArgs e)
@@ -135,6 +150,8 @@ namespace documentosEstadia1._1
 
         private void button_materias_Click(object sender, System.EventArgs e)
         {
+            doc.Visible = false;
+            mat.Visible = true;
             seleccionarBtn(3);
         }
 
