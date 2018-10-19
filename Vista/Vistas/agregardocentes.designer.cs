@@ -43,17 +43,17 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txt_estado = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.txt_numero_horas = new System.Windows.Forms.NumericUpDown();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.btn_modificar = new System.Windows.Forms.Button();
-            this.btn_agregar = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.btn_aceptar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -65,7 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_numero_horas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -222,21 +222,21 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "ESTADO";
             // 
-            // comboBox1
+            // txt_estado
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_estado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.txt_estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txt_estado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txt_estado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_estado.FormattingEnabled = true;
+            this.txt_estado.Items.AddRange(new object[] {
             "DESHABILITADO",
             "HABILITADO"});
-            this.comboBox1.Location = new System.Drawing.Point(27, 116);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(219, 28);
-            this.comboBox1.TabIndex = 14;
+            this.txt_estado.Location = new System.Drawing.Point(27, 116);
+            this.txt_estado.Name = "txt_estado";
+            this.txt_estado.Size = new System.Drawing.Size(219, 28);
+            this.txt_estado.TabIndex = 14;
             // 
             // label5
             // 
@@ -248,16 +248,16 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "HORAS ASIGNADA";
             // 
-            // numericUpDown1
+            // txt_numero_horas
             // 
-            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_numero_horas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(27, 117);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(219, 25);
-            this.numericUpDown1.TabIndex = 19;
+            this.txt_numero_horas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_numero_horas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_numero_horas.Location = new System.Drawing.Point(27, 117);
+            this.txt_numero_horas.Name = "txt_numero_horas";
+            this.txt_numero_horas.Size = new System.Drawing.Size(219, 25);
+            this.txt_numero_horas.TabIndex = 19;
             // 
             // pictureBox7
             // 
@@ -319,45 +319,45 @@
             this.pictureBox12.TabIndex = 23;
             this.pictureBox12.TabStop = false;
             // 
-            // btn_modificar
+            // btn_cancelar
             // 
-            this.btn_modificar.BackColor = System.Drawing.Color.Gray;
-            this.btn_modificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_modificar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_modificar.FlatAppearance.BorderSize = 0;
-            this.btn_modificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.btn_modificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_modificar.Image")));
-            this.btn_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_modificar.Location = new System.Drawing.Point(202, 233);
-            this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(163, 41);
-            this.btn_modificar.TabIndex = 27;
-            this.btn_modificar.Text = "   CANCELAR";
-            this.btn_modificar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.BackColor = System.Drawing.Color.Gray;
+            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_cancelar.FlatAppearance.BorderSize = 0;
+            this.btn_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_cancelar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cancelar.Image")));
+            this.btn_cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cancelar.Location = new System.Drawing.Point(202, 233);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(163, 41);
+            this.btn_cancelar.TabIndex = 27;
+            this.btn_cancelar.Text = "   CANCELAR";
+            this.btn_cancelar.UseVisualStyleBackColor = false;
             // 
-            // btn_agregar
+            // btn_aceptar
             // 
-            this.btn_agregar.BackColor = System.Drawing.Color.Gray;
-            this.btn_agregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_agregar.FlatAppearance.BorderSize = 0;
-            this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_agregar.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar.Image")));
-            this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_agregar.Location = new System.Drawing.Point(12, 233);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(161, 41);
-            this.btn_agregar.TabIndex = 26;
-            this.btn_agregar.Text = "  ACEPTAR";
-            this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_aceptar.BackColor = System.Drawing.Color.Gray;
+            this.btn_aceptar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_aceptar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_aceptar.FlatAppearance.BorderSize = 0;
+            this.btn_aceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_aceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_aceptar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_aceptar.Image = ((System.Drawing.Image)(resources.GetObject("btn_aceptar.Image")));
+            this.btn_aceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_aceptar.Location = new System.Drawing.Point(12, 233);
+            this.btn_aceptar.Name = "btn_aceptar";
+            this.btn_aceptar.Size = new System.Drawing.Size(161, 41);
+            this.btn_aceptar.TabIndex = 26;
+            this.btn_aceptar.Text = "  ACEPTAR";
+            this.btn_aceptar.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -371,7 +371,7 @@
             this.panel1.Controls.Add(this.txt_nombre_docentes);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.txt_estado);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.pictureBox12);
             this.panel1.Controls.Add(this.pictureBox11);
@@ -389,7 +389,7 @@
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.numericUpDown1);
+            this.panel2.Controls.Add(this.txt_numero_horas);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.txt_apellidos);
@@ -426,8 +426,8 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(577, 296);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.btn_modificar);
-            this.Controls.Add(this.btn_agregar);
+            this.Controls.Add(this.btn_cancelar);
+            this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox_icon);
             this.Controls.Add(this.pictureBox1_cerrar);
@@ -442,7 +442,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_numero_horas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -483,10 +483,10 @@
         private System.Windows.Forms.PictureBox pictureBox12;
         public System.Windows.Forms.TextBox txt_nombre_docentes;
         public System.Windows.Forms.TextBox txt_apellidos;
-        public System.Windows.Forms.ComboBox comboBox1;
-        public System.Windows.Forms.NumericUpDown numericUpDown1;
-        public System.Windows.Forms.Button btn_modificar;
-        public System.Windows.Forms.Button btn_agregar;
+        public System.Windows.Forms.ComboBox txt_estado;
+        public System.Windows.Forms.NumericUpDown txt_numero_horas;
+        public System.Windows.Forms.Button btn_cancelar;
+        public System.Windows.Forms.Button btn_aceptar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;

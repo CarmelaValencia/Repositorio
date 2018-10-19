@@ -369,7 +369,7 @@
         AdmCCzI9SfG4AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_modificar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_cancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAGYktHRAD/AP8A/6C9p5MAAAM3SURBVGhD7ZlLaxNRFMfjCxc+0I2CCrpwLUKdmbbpYphJA11L
@@ -389,7 +389,7 @@
         9uiReFKpvyJzJVPuEPO9AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_agregar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_aceptar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAGYktHRAD/AP8A/6C9p5MAAAMhSURBVGhD7ZnLbtNAFIbDTSy4CDYgARK8BCx4BkqhIHgQFixY

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,11 @@ namespace Vista.Modelos
         private String apellidos;
         private int numero_horas;
         private String estado;
+
+        public ModeloDocente()
+        {
+            new ModeloDocente (0,"","",0,"");
+        }
 
         public ModeloDocente(int id_docentes, string nombre_docentes, string apellidos, int numero_horas, string estado)
         {
@@ -28,5 +34,6 @@ namespace Vista.Modelos
         public string Apellidos { get => apellidos; set => apellidos = value; }
         public int Numero_horas { get => numero_horas; set => numero_horas = value; }
         public string Estado { get => estado; set => estado = value; }
+        
     }
 }

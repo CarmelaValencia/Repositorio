@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vista.ControlVistas;
 
 namespace documentosEstadia1._1.Vistas
 {
     public partial class agregardocentes : Form
     {
         FlowLayoutPanel flp;
+
         public agregardocentes(FlowLayoutPanel flpClos,int modAgre)
         {
             InitializeComponent();
+            ControlVistaDocente controlVistaDocente= new ControlVistaDocente();
+            controlVistaDocente.iniciarAgregarDocentes(this);
             flp=flpClos;
         }
 
