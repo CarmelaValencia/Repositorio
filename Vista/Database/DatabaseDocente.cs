@@ -77,7 +77,7 @@ namespace Vista.Database
 
         public Boolean Actualizar(ModeloDocente modeloDocente)
         {
-            String query = "update materias set nombre_docentes=@nombre,apellidos=@apellidos,numero_horas=@numero_horas," +
+            String query = "update docentes set nombre_docentes=@nombre,apellidos=@apellidos,numero_horas=@numero_horas," +
                 "estado=@estado where id_docentes=@id";
             try
             {

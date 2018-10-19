@@ -18,8 +18,6 @@ namespace documentosEstadia1._1.Vistas
         public agregardocentes(FlowLayoutPanel flpClos,int modAgre)
         {
             InitializeComponent();
-            ControlVistaDocente controlVistaDocente= new ControlVistaDocente();
-            controlVistaDocente.iniciarAgregarDocentes(this);
             flp=flpClos;
         }
 

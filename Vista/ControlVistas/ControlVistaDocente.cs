@@ -10,70 +10,61 @@ namespace Vista.ControlVistas
 {
     class ControlVistaDocente
     {
-        public static int id = 0;
-        public static String nombre = "";
-        public static String apellidos = "";
-        public static Int32 numero_horas = 0;
-        public static String estado = "";
         public static String opcion = "";
-        agregardocentes vistaAgregar = null;
-        DataTable tablaAux = new DataTable();
-        docentes vistaDocenteObj = null;
-        ModeloDocente mdloDocente = new ModeloDocente(0, "", "", 0, "");
-        ControlDocente controlDocente = new ControlDocente();
+        public static agregardocentes vistaAgregarObj = null;
+        public static DataTable tablaAux = new DataTable();
+        public static docentes vistaDocenteObj = null;
+        public static ModeloDocente mdloDocente = null;
+        static ControlDocente controlDocente = new ControlDocente();
         public void iniciarDocentes(docentes docentes)
         {
             vistaDocenteObj = docentes;
             rellenarTabla();
             vistaDocenteObj.btn_eliminar.Click += new EventHandler(btn_Delete);
-            vistaDocenteObj.btn_agregar.Click += new EventHandler(btn_Add);
-            vistaDocenteObj.btn_modificar.Click += new EventHandler(btn_Update_Click);
             vistaDocenteObj.txt_buscar.TextChanged += new EventHandler(buscando);
         }
-
-        private void btn_Add(object sender, EventArgs e)
+        
+        public static void cargarValores(agregardocentes vistaAgregar)
         {
-            ControlVistaDocente.opcion = "Registrar";
-        }
-
-        public void iniciarAgregarDocentes(agregardocentes agregardocentesObj) {
-            vistaAgregar = agregardocentesObj;
+            vistaAgregarObj = vistaAgregar;
             vistaAgregar.btn_aceptar.Click += new EventHandler(btn_aceptar);
             vistaAgregar.btn_cancelar.Click += new EventHandler(btn_cancelar);
-            MessageBox.Show("opcion:"+opcion);
-            if (opcion.Equals("Modificar")) {
-                cargarValores(vistaAgregar);
+            if (opcion.Equals("Registrar"))
+            {
+                mdloDocente = new ModeloDocente(0,"","",0,"HABILITADO");
             }
+            vistaAgregar.txt_nombre_docentes.Text = mdloDocente.Nombre_docentes;
+            vistaAgregar.txt_apellidos.Text = mdloDocente.Apellidos;
+            vistaAgregar.txt_numero_horas.Text = mdloDocente.Numero_horas.ToString();
+            vistaAgregar.txt_estado.Text = mdloDocente.Estado;
         }
-
-        public  void cargarValores(agregardocentes vistaAgregar)
+        
+        public static void obtenerSeleccion()
         {
-            /*
-            */
-
-
-            vistaAgregar.txt_nombre_docentes.Text = "nombre";
-            vistaAgregar.txt_apellidos.Text = ControlVistaDocente.apellidos;
-            vistaAgregar.txt_numero_horas.Text = ControlVistaDocente.numero_horas.ToString();
-            vistaAgregar.txt_estado.Text =ControlVistaDocente.estado;
+            int fila = vistaDocenteObj.lista.CurrentCell.RowIndex;
+            DataRow row = ControlVistaDocente.tablaAux.Rows[fila];
+            Int32 valor = Convert.ToInt32(row["id_docentes"]);
+            mdloDocente = new ModeloDocente(valor, row["nombre_docentes"].ToString(), row["apellidos"].ToString(),
+                Convert.ToInt32(row["numero_horas"]), row["estado"].ToString());
         }
 
-        private void btn_cancelar(object sender, EventArgs e)
+        private static void btn_cancelar(object sender, EventArgs e)
         {
             
         }
 
-        private void btn_aceptar(object sender, EventArgs e)
+        public static void btn_aceptar(object sender, EventArgs e)
         {
-            String nombre = vistaAgregar.txt_nombre_docentes.Text;
-            String apellidos = vistaAgregar.txt_apellidos.Text;
-            int numero_horas = int.Parse(vistaAgregar.txt_numero_horas.Text);
-            String estado = vistaAgregar.txt_estado.Text;
-            mdloDocente = new ModeloDocente(id, nombre, apellidos, numero_horas, estado);
+            String nombre = vistaAgregarObj.txt_nombre_docentes.Text;
+            String apellidos = vistaAgregarObj.txt_apellidos.Text;
+            int numero_horas = int.Parse(vistaAgregarObj.txt_numero_horas.Text);
+            String estado = vistaAgregarObj.txt_estado.Text;
+            mdloDocente = new ModeloDocente(mdloDocente.Id_docentes, nombre, apellidos, numero_horas, estado);
             if (opcion.Equals("Registrar"))
             {
                 if (controlDocente.Guardar(mdloDocente))
                 {
+                    rellenarTabla();
                     MessageBox.Show("Registro guardado");
                 }
                 else {
@@ -84,6 +75,7 @@ namespace Vista.ControlVistas
             {
                 if (controlDocente.Actualizar(mdloDocente))
                 {
+                    rellenarTabla();
                     MessageBox.Show("Registro actualizado");
                 }
                 else
@@ -96,23 +88,6 @@ namespace Vista.ControlVistas
         private void buscando(object sender, EventArgs e)
         {
             rellenarTabla();
-        }
-
-        private void btn_Update_Click(object sender, EventArgs e)
-        {
-
-            int fila = vistaDocenteObj.lista.CurrentCell.RowIndex;
-            Console.WriteLine("fila:" + fila);
-            DataRow row = tablaAux.Rows[fila];
-            Int32 valor = Convert.ToInt32(row["id_docentes"]);
-            ControlVistaDocente.id = valor;
-            ControlVistaDocente.nombre = row["nombre_docentes"].ToString();
-            ControlVistaDocente.apellidos = row["apellidos"].ToString();
-            ControlVistaDocente.numero_horas = Convert.ToInt32(row["numero_horas"]);
-            ControlVistaDocente.estado = row["estado"].ToString();
-            Console.WriteLine("evento creado opcion:" + ControlVistaDocente.opcion);
-            ControlVistaDocente.opcion = "Modificar";
-            //cargarValores(new agregardocentes(new FlowLayoutPanel(),0));
         }
 
         private void btn_Delete(object sender, EventArgs e)
@@ -130,7 +105,7 @@ namespace Vista.ControlVistas
             }
         }
 
-        private void rellenarTabla()
+        private static void rellenarTabla()
         {
             vistaDocenteObj.lista.DataSource = controlDocente.Consultar(vistaDocenteObj.txt_buscar.Text);
             tablaAux = controlDocente.RecuperarTablaAux();

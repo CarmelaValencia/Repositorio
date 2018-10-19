@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(agregardocentes));
             this.pictureBox1_cerrar = new System.Windows.Forms.PictureBox();
             this.pictureBox_icon = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelOpcion = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -98,15 +98,15 @@
             this.pictureBox_icon.TabIndex = 1;
             this.pictureBox_icon.TabStop = false;
             // 
-            // label1
+            // labelOpcion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "AGREGAR DOCENTE";
+            this.labelOpcion.AutoSize = true;
+            this.labelOpcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOpcion.Location = new System.Drawing.Point(67, 29);
+            this.labelOpcion.Name = "labelOpcion";
+            this.labelOpcion.Size = new System.Drawing.Size(188, 20);
+            this.labelOpcion.TabIndex = 2;
+            this.labelOpcion.Text = "AGREGAR DOCENTE";
             // 
             // label2
             // 
@@ -234,6 +234,7 @@
             "DESHABILITADO",
             "HABILITADO"});
             this.txt_estado.Location = new System.Drawing.Point(27, 116);
+            this.txt_estado.MaxDropDownItems = 2;
             this.txt_estado.Name = "txt_estado";
             this.txt_estado.Size = new System.Drawing.Size(219, 28);
             this.txt_estado.TabIndex = 14;
@@ -428,7 +429,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_aceptar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelOpcion);
             this.Controls.Add(this.pictureBox_icon);
             this.Controls.Add(this.pictureBox1_cerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -464,7 +465,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1_cerrar;
         private System.Windows.Forms.PictureBox pictureBox_icon;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -490,5 +490,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        public System.Windows.Forms.Label labelOpcion;
     }
 }
