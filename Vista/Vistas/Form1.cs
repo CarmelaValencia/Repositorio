@@ -58,6 +58,7 @@ namespace documentosEstadia1._1
             agregarTamanio(doc);
             agregarTamanio(mat);
             agregarTamanio(grp);
+            agregarTamanio(hr);
         }
 
         public void agregarTamanio(Form frm) {
