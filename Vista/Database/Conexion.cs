@@ -26,7 +26,7 @@ namespace Database
             
             /*Realizamos la conexion a la base de datos*/
             try {
-                cn = new SQLiteConnection("data source=C:/Users/Karmela/Documents/generadorHorario.db");
+                cn = new SQLiteConnection("data source=generadorHorario.db");
                 return cn;
             }
             catch (SQLiteException ex) {
