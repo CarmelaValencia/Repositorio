@@ -38,6 +38,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btn_asignar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.lista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,11 +72,12 @@
             this.btn_modificar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_modificar.Image = ((System.Drawing.Image)(resources.GetObject("btn_modificar.Image")));
             this.btn_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_modificar.Location = new System.Drawing.Point(179, 231);
+            this.btn_modificar.Location = new System.Drawing.Point(151, 232);
             this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(163, 41);
+            this.btn_modificar.Size = new System.Drawing.Size(133, 41);
             this.btn_modificar.TabIndex = 30;
-            this.btn_modificar.Text = "      MODIFICAR";
+            this.btn_modificar.Text = "MODIFICAR";
+            this.btn_modificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_modificar.UseVisualStyleBackColor = false;
             this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
@@ -93,11 +95,12 @@
             this.btn_eliminar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_eliminar.Image = ((System.Drawing.Image)(resources.GetObject("btn_eliminar.Image")));
             this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_eliminar.Location = new System.Drawing.Point(348, 231);
+            this.btn_eliminar.Location = new System.Drawing.Point(290, 232);
             this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(164, 41);
+            this.btn_eliminar.Size = new System.Drawing.Size(133, 41);
             this.btn_eliminar.TabIndex = 29;
             this.btn_eliminar.Text = "ELIMINAR";
+            this.btn_eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_eliminar.UseVisualStyleBackColor = false;
             // 
             // btn_agregar
@@ -116,9 +119,10 @@
             this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_agregar.Location = new System.Drawing.Point(12, 232);
             this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(161, 41);
+            this.btn_agregar.Size = new System.Drawing.Size(133, 41);
             this.btn_agregar.TabIndex = 28;
             this.btn_agregar.Text = "AGREGAR";
+            this.btn_agregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_agregar.UseVisualStyleBackColor = false;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
@@ -182,6 +186,28 @@
             this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
             // 
+            // btn_asignar
+            // 
+            this.btn_asignar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_asignar.BackColor = System.Drawing.Color.Gray;
+            this.btn_asignar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_asignar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_asignar.FlatAppearance.BorderSize = 0;
+            this.btn_asignar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_asignar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_asignar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_asignar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_asignar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_asignar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_asignar.Location = new System.Drawing.Point(429, 232);
+            this.btn_asignar.Name = "btn_asignar";
+            this.btn_asignar.Size = new System.Drawing.Size(135, 41);
+            this.btn_asignar.TabIndex = 32;
+            this.btn_asignar.Text = "ASIGNAR MATERIA";
+            this.btn_asignar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_asignar.UseVisualStyleBackColor = false;
+            this.btn_asignar.Click += new System.EventHandler(this.btn_asignar_Click);
+            // 
             // grupos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +215,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(577, 285);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.btn_asignar);
             this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_agregar);
@@ -220,5 +247,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Button btn_asignar;
     }
 }

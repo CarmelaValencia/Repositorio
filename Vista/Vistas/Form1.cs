@@ -24,8 +24,8 @@ namespace documentosEstadia1._1
             mat = new materias();
             grp = new grupos();
             hr = new horario();
-            bajarNivel(doc);
             bajarNivel(mat);
+            bajarNivel(doc);
             bajarNivel(grp);
             bajarNivel(hr);
         }
