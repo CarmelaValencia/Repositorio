@@ -60,27 +60,31 @@ namespace Vista.ControlVistas
             int numero_horas = int.Parse(vistaAgregarObj.txt_numero_horas.Text);
             String estado = vistaAgregarObj.txt_estado.Text;
             mdloDocente = new ModeloDocente(mdloDocente.Id_docentes, nombre, apellidos, numero_horas, estado);
-            if (opcion.Equals("Registrar"))
+            if (ControlCamposVacios.detactarVacios(new String[] { nombre, apellidos, numero_horas + "", estado }) == 0)
             {
-                if (controlDocente.Guardar(mdloDocente))
+                if (opcion.Equals("Registrar"))
                 {
-                    rellenarTabla();
-                    MessageBox.Show("Registro guardado");
+                    if (controlDocente.Guardar(mdloDocente))
+                    {
+                        rellenarTabla();
+                        MessageBox.Show("Registro guardado");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al guardar el registro");
+                    }
                 }
-                else {
-                    MessageBox.Show("Error al guardar el registro");
-                }
-            }
-            else if (opcion.Equals("Modificar"))
-            {
-                if (controlDocente.Actualizar(mdloDocente))
+                else if (opcion.Equals("Modificar"))
                 {
-                    rellenarTabla();
-                    MessageBox.Show("Registro actualizado");
-                }
-                else
-                {
-                    MessageBox.Show("Error al actualizar el registro");
+                    if (controlDocente.Actualizar(mdloDocente))
+                    {
+                        rellenarTabla();
+                        MessageBox.Show("Registro actualizado");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al actualizar el registro");
+                    }
                 }
             }
         }
