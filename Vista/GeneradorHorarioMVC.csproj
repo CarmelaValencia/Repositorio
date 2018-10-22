@@ -54,10 +54,12 @@
   <ItemGroup>
     <Compile Include="ControladorDB\ControlDocente.cs" />
     <Compile Include="ControladorDB\ControlGrupo.cs" />
+    <Compile Include="ControladorDB\ControlHora.cs" />
     <Compile Include="ControladorDB\ControlMateria.cs" />
     <Compile Include="ControlVistas\ControlCamposVacios.cs" />
     <Compile Include="ControlVistas\ControlVistaDocente.cs" />
     <Compile Include="ControlVistas\ControlVistaGrupo.cs" />
+    <Compile Include="ControlVistas\ControlVistaHora.cs" />
     <Compile Include="ControlVistas\ControlVistaMateria.cs" />
     <Compile Include="Database\Conexion.cs" />
     <Compile Include="Database\DatabaseDocente.cs" />

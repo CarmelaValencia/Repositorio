@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vista.ControlVistas;
 
 namespace Vista.Vistas
 {
@@ -26,17 +27,20 @@ namespace Vista.Vistas
             flowLayoutPanel1.Height = this.Height;
             flowLayoutPanel1.Controls.Add(agh);
             flowLayoutPanel1.Visible = false;
-           
+            ControlVistaHora controlVistaDocente = new ControlVistaHora();
+            controlVistaDocente.iniciarHoras(this);
             asignarTamanioVentanaResponsivo(agh);
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
+            ControlVistaHora.opcion = "Registrar";
             flowLayoutPanel1.Controls.Remove(agh);
             agh = new agregarhorario(flowLayoutPanel1);
             agh.labelOpcion.Text = "AGREGAR HORARIO";
             agh.TopLevel = false;
             agh.Visible = true;
+            ControlVistaHora.cargarValores(agh);
             flowLayoutPanel1.Width = this.Width;
             flowLayoutPanel1.Height = this.Height;
             flowLayoutPanel1.Controls.Add(agh);
@@ -53,6 +57,23 @@ namespace Vista.Vistas
         private void flowLayoutPanel1_Resize(object sender, EventArgs e)
         {
             asignarTamanioVentanaResponsivo(agh);
+        }
+
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+            ControlVistaHora.opcion = "Modificar";
+            flowLayoutPanel1.Controls.Remove(agh);
+            flowLayoutPanel1.Visible = true;
+            agh = new agregarhorario(flowLayoutPanel1);
+            agh.labelOpcion.Text = "MODIFICAR DATOS DE LA HORA";
+            ControlVistaHora.obtenerSeleccion();
+            ControlVistaHora.cargarValores(agh);
+            agh.TopLevel = false;
+            agh.Visible = true;
+            flowLayoutPanel1.Width = this.Width;
+            flowLayoutPanel1.Height = this.Height;
+            asignarTamanioVentanaResponsivo(agh);
+            flowLayoutPanel1.Controls.Add(agh);
         }
     }
 }
