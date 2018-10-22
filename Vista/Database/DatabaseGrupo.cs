@@ -112,5 +112,12 @@ namespace Vista.Database
                 " or semestre like'%" + buscar + "%' ", cn);
             return da;
         }
+
+        public SQLiteDataAdapter ListarGrupos(String buscar) {
+            cn = Conexion.Instance.Conectar();
+            da = new SQLiteDataAdapter("select (semestre || ' Semestre :: Grupo ' || nombre_grupos || ' ' || area) " +
+                " as nombreGrupos,id_grupos from grupos;",cn);
+            return da;
+        }
     }
 }

@@ -36,13 +36,20 @@ namespace Controlador
             dt.Columns.Add("CICLO ESCOLAR");
             SQLiteDataAdapter da = databaseMateria.Consultar(buscar);
             TablaAux = new DataTable();
-            //da.Fill(TablaAux);
+            da.Fill(TablaAux);
             for (int i = 0; i < TablaAux.Rows.Count; i++)
             {
                 DataRow row = TablaAux.Rows[i];
                 dt.Rows.Add(row["nombre_materias"], row["total_horas"], row["horas_semana"], row["ciclo"]);
             }
             return dt;
+        }
+        public DataTable ListarMaterias(int idGrupo)
+        {
+            DataTable dataTable = new DataTable();
+            SQLiteDataAdapter da = databaseMateria.ListarMaterias(idGrupo);
+            da.Fill(dataTable);
+            return dataTable;
         }
     }
 }

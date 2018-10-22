@@ -61,6 +61,7 @@
     <Compile Include="ControlVistas\ControlVistaGrupo.cs" />
     <Compile Include="ControlVistas\ControlVistaHora.cs" />
     <Compile Include="ControlVistas\ControlVistaMateria.cs" />
+    <Compile Include="ControlVistas\ControlVistaMateriasDocentes.cs" />
     <Compile Include="Database\Conexion.cs" />
     <Compile Include="Database\DatabaseDocente.cs" />
     <Compile Include="Database\DatabaseGrupo.cs" />
@@ -95,6 +96,12 @@
     </Compile>
     <Compile Include="Vistas\agregarmaterias.Designer.cs">
       <DependentUpon>agregarmaterias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\asignarMateriasDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\asignarMateriasDocente.Designer.cs">
+      <DependentUpon>asignarMateriasDocente.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\docentes.cs">
       <SubType>Form</SubType>
@@ -152,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\agregarmaterias.resx">
       <DependentUpon>agregarmaterias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\asignarMateriasDocente.resx">
+      <DependentUpon>asignarMateriasDocente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\docentes.resx">
       <DependentUpon>docentes.cs</DependentUpon>

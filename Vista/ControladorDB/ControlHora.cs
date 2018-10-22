@@ -25,7 +25,7 @@ namespace Vista.ControladorDB
             dt.Columns.Add("HORA DE INICIO"); dt.Columns.Add("HORA DE FIN"); dt.Columns.Add("TURNO");
             SQLiteDataAdapter da = databaseHora.Consultar(buscar);
             dataTable = new DataTable();
-            //da.Fill(dataTable);
+            da.Fill(dataTable);
             for (int i = 0; i < dataTable.Rows.Count; i++)
             {
                 DataRow row = dataTable.Rows[i];

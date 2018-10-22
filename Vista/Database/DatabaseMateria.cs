@@ -106,6 +106,10 @@ namespace Database
                 " or ciclo like'%" + buscar + "%' ", cn);
             return da;
         }
-
+        public SQLiteDataAdapter ListarMaterias(int idGrupo) {
+            cn = Conexion.Instance.Conectar();
+            da = new SQLiteDataAdapter("select * from m_g where id_gruposf="+idGrupo+" ",cn);
+            return da;
+        }
     }
 }

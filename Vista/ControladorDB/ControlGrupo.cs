@@ -37,13 +37,19 @@ namespace Vista.ControladorDB
             dt.Columns.Add("ESTADO");
             SQLiteDataAdapter da = databaseGrupo.Consultar(buscar);
             TablaAux = new DataTable();
-            //da.Fill(TablaAux);
+            da.Fill(TablaAux);
             for (int i = 0; i < TablaAux.Rows.Count; i++)
             {
                 DataRow row = TablaAux.Rows[i];
                 dt.Rows.Add(row["semestre"], row["nombre_grupos"], row["area"], row["estado"]);
             }
             return dt;
+        }
+        public DataTable ListarGrupos() {
+            SQLiteDataAdapter da = databaseGrupo.ListarGrupos("");
+            DataTable TablaAuxN = new DataTable();
+            da.Fill(TablaAuxN);
+            return TablaAuxN;
         }
     }
 }

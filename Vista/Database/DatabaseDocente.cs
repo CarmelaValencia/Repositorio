@@ -115,5 +115,7 @@ namespace Vista.Database
                 " or apellidos like'%" + buscar + "%' ", cn);
             return da;
         }
+
+        
     }
 }

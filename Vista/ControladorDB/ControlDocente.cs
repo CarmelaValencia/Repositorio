@@ -40,7 +40,7 @@ namespace Vista.ControladorDB
             dt.Columns.Add("ESTADO");
             SQLiteDataAdapter da= databaseDocente.Consultar(buscar);
             TablaAux = new DataTable();
-            //da.Fill(TablaAux);
+            da.Fill(TablaAux);
             for (int i = 0; i < TablaAux.Rows.Count; i++)
             {
                 DataRow row = TablaAux.Rows[i];
