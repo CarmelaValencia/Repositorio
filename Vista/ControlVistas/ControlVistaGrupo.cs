@@ -65,28 +65,32 @@ namespace Vista.ControlVistas
             String estado = vistaAgregarObj.txt_estado.Text;
             Console.WriteLine("id rgupo:"+mdloGrupo.Id_grupos);
             mdloGrupo = new ModeloGrupo(mdloGrupo.Id_grupos, semestre, nombre, area, estado);
-            if (opcion.Equals("Registrar"))
+            if (ControlCamposVacios.detactarVacios(new String[] { nombre, semestre+"",
+                area, estado }) == 0)
             {
-                if (controlGrupo.Guardar(mdloGrupo))
+                if (opcion.Equals("Registrar"))
                 {
-                    rellenarTabla();
-                    MessageBox.Show("Registro guardado");
+                    if (controlGrupo.Guardar(mdloGrupo))
+                    {
+                        rellenarTabla();
+                        MessageBox.Show("Registro guardado");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al guardar el registro");
+                    }
                 }
-                else
+                else if (opcion.Equals("Modificar"))
                 {
-                    MessageBox.Show("Error al guardar el registro");
-                }
-            }
-            else if (opcion.Equals("Modificar"))
-            {
-                if (controlGrupo.Actualizar(mdloGrupo))
-                {
-                    rellenarTabla();
-                    MessageBox.Show("Registro actualizado");
-                }
-                else
-                {
-                    MessageBox.Show("Error al actualizar el registro");
+                    if (controlGrupo.Actualizar(mdloGrupo))
+                    {
+                        rellenarTabla();
+                        MessageBox.Show("Registro actualizado");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al actualizar el registro");
+                    }
                 }
             }
         }

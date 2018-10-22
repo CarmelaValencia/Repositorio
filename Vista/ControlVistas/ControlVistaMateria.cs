@@ -61,25 +61,29 @@ namespace Vista.ControlVistas
             int semana = int.Parse(agregarmateriasobj.txt_horas_semana.Text);
             String ciclo = agregarmateriasobj.txt_ciclo.Text;
             mdloMateria = new ModeloMateria(mdloMateria.IdMateria, nombre, total, semana, ciclo);
-            if (opcion.Equals("Registrar"))
+            if (ControlCamposVacios.detactarVacios(new String[] { nombre,
+                total+"", semana+"", ciclo }) == 0)
             {
-                if (controlMateria.Guardar(mdloMateria))
+                if (opcion.Equals("Registrar"))
                 {
-                    rellenarTabla();
-                    MessageBox.Show("Registro guardado");
+                    if (controlMateria.Guardar(mdloMateria))
+                    {
+                        rellenarTabla();
+                        MessageBox.Show("Registro guardado");
+                    }
+                    else { MessageBox.Show("Error al guardar el registro"); }
                 }
-                else { MessageBox.Show("Error al guardar el registro"); }
-            }
-            else if (opcion.Equals("Modificar"))
-            {
-                if (controlMateria.Actualizar(mdloMateria))
+                else if (opcion.Equals("Modificar"))
                 {
-                    rellenarTabla();
-                    MessageBox.Show("Registro actualizado");
-                }
-                else
-                {
-                    MessageBox.Show("Error al actualizar el registro");
+                    if (controlMateria.Actualizar(mdloMateria))
+                    {
+                        rellenarTabla();
+                        MessageBox.Show("Registro actualizado");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al actualizar el registro");
+                    }
                 }
             }
         }
