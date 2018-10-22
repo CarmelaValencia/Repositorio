@@ -53,10 +53,13 @@
             // 
             // listaMaterias1
             // 
+            this.listaMaterias1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listaMaterias1.FormattingEnabled = true;
             this.listaMaterias1.Location = new System.Drawing.Point(21, 100);
             this.listaMaterias1.Name = "listaMaterias1";
-            this.listaMaterias1.Size = new System.Drawing.Size(360, 229);
+            this.listaMaterias1.Size = new System.Drawing.Size(381, 199);
             this.listaMaterias1.TabIndex = 2;
             // 
             // pictureBox1_cerrar
@@ -69,6 +72,7 @@
             this.pictureBox1_cerrar.Size = new System.Drawing.Size(49, 47);
             this.pictureBox1_cerrar.TabIndex = 32;
             this.pictureBox1_cerrar.TabStop = false;
+            this.pictureBox1_cerrar.Click += new System.EventHandler(this.pictureBox1_cerrar_Click);
             // 
             // asignarMateriasDocente
             // 

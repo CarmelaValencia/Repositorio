@@ -21,5 +21,10 @@ namespace Vista.Vistas
             control.llenarCombo(this);
             flpo = flp;
         }
+
+        private void pictureBox1_cerrar_Click(object sender, EventArgs e)
+        {
+            flpo.Visible = false;
+        }
     }
 }
