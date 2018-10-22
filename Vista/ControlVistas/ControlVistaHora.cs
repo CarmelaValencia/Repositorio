@@ -24,12 +24,15 @@ namespace Vista.ControlVistas
             rellenarTabla();
             vistaHorarioObj.btn_eliminar.Click += new EventHandler(btn_Delete);
             vistaHorarioObj.txt_buscar.TextChanged += new EventHandler(buscando);
+            ControlCamposVacios.soloLetrasTxtBox(vistaHorarioObj.txt_buscar);
         }
         public static void cargarValores(agregarhorario vistaAgregar)
         {
             vistaAgregarObj = vistaAgregar;
             vistaAgregar.btn_aceptar.Click += new EventHandler(btn_aceptar);
             vistaAgregar.btn_cancelar.Click += new EventHandler(btn_cancelar);
+            ControlCamposVacios.soloLetrasTxtBox(vistaAgregarObj.txt_apellidos);
+            ControlCamposVacios.soloLetrasTxtBox(vistaAgregarObj.txt_nombre_docentes);
             if (opcion.Equals("Registrar"))
             {
                 mdloHora = new ModeloHora(0, "", "","MATUTINO");

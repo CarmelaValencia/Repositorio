@@ -25,6 +25,7 @@ namespace Vista.ControlVistas
             rellenarTabla();
             vistaGrupoObj.btn_eliminar.Click += new EventHandler(btn_Delete);
             vistaGrupoObj.txt_buscar.TextChanged += new EventHandler(buscando);
+            ControlCamposVacios.soloLetrasTxtBox(vistaGrupoObj.txt_buscar);
         }
 
         public static void cargarValores(agregargrupos vistaAgregar)
@@ -32,6 +33,8 @@ namespace Vista.ControlVistas
             vistaAgregarObj = vistaAgregar;
             vistaAgregar.btn_aceptar.Click += new EventHandler(btn_aceptar);
             vistaAgregar.btn_cancelar.Click += new EventHandler(btn_cancelar);
+            ControlCamposVacios.soloLetrasTxtBox(vistaAgregarObj.txt_area);
+            ControlCamposVacios.soloLetrasTxtBox(vistaAgregarObj.txt_nombre_grupos);
             if (opcion.Equals("Registrar"))
             {
                 mdloGrupo = new ModeloGrupo(0, 0, "", "", "HABILITADO");

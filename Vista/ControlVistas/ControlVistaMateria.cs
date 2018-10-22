@@ -28,11 +28,14 @@ namespace Vista.ControlVistas
             rellenarTabla();
             vistaMateriaObj.btn_eliminar.Click += new EventHandler(btn_Delete);
             vistaMateriaObj.txt_buscar.TextChanged += new EventHandler(buscando);
+            ControlCamposVacios.soloLetrasTxtBox(vistaMateriaObj.txt_buscar);
         }
         public static void cargarValores(agregarmaterias agregarmaterias) {
             agregarmateriasobj = agregarmaterias;
             agregarmaterias.btn_aceptar.Click += new EventHandler(btn_aceptar_click);
             agregarmaterias.btn_cancelar.Click += new EventHandler(btn_cancelar_click);
+            ControlCamposVacios.soloLetrasTxtBox(agregarmaterias.txt_ciclo);
+            ControlCamposVacios.soloLetrasTxtBox(agregarmaterias.txt_nombre_materias);
             if (opcion.Equals("Registrar"))
             {
                 mdloMateria = new ModeloMateria(0, "", 0, 0, "");

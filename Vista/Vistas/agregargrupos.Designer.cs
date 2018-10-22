@@ -43,7 +43,6 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_nombre_grupos = new System.Windows.Forms.TextBox();
-            this.txt_estado = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -57,6 +56,7 @@
             this.labelOpcion = new System.Windows.Forms.Label();
             this.pictureBox_icon = new System.Windows.Forms.PictureBox();
             this.pictureBox1_cerrar = new System.Windows.Forms.PictureBox();
+            this.txt_estado = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_semestre)).BeginInit();
@@ -225,8 +225,8 @@
             this.panel2.AutoSize = true;
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel2.Controls.Add(this.txt_nombre_grupos);
             this.panel2.Controls.Add(this.txt_estado);
+            this.panel2.Controls.Add(this.txt_nombre_grupos);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.pictureBox5);
@@ -251,18 +251,6 @@
             this.txt_nombre_grupos.Size = new System.Drawing.Size(219, 19);
             this.txt_nombre_grupos.TabIndex = 27;
             this.txt_nombre_grupos.TabStop = false;
-            // 
-            // txt_estado
-            // 
-            this.txt_estado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_estado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_estado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_estado.Location = new System.Drawing.Point(27, 121);
-            this.txt_estado.Name = "txt_estado";
-            this.txt_estado.Size = new System.Drawing.Size(219, 19);
-            this.txt_estado.TabIndex = 26;
-            this.txt_estado.TabStop = false;
             // 
             // label3
             // 
@@ -415,6 +403,21 @@
             this.pictureBox1_cerrar.TabStop = false;
             this.pictureBox1_cerrar.Click += new System.EventHandler(this.pictureBox1_cerrar_Click);
             // 
+            // txt_estado
+            // 
+            this.txt_estado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_estado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txt_estado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_estado.FormattingEnabled = true;
+            this.txt_estado.Items.AddRange(new object[] {
+            "HABILITADO",
+            "DESABILITADO"});
+            this.txt_estado.Location = new System.Drawing.Point(27, 116);
+            this.txt_estado.Name = "txt_estado";
+            this.txt_estado.Size = new System.Drawing.Size(219, 28);
+            this.txt_estado.TabIndex = 28;
+            // 
             // agregargrupos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,7 +475,6 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.TextBox txt_nombre_grupos;
-        public System.Windows.Forms.TextBox txt_estado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -486,5 +488,6 @@
         private System.Windows.Forms.PictureBox pictureBox_icon;
         private System.Windows.Forms.PictureBox pictureBox1_cerrar;
         public System.Windows.Forms.Label labelOpcion;
+        public System.Windows.Forms.ComboBox txt_estado;
     }
 }
