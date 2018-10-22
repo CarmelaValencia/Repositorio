@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(asignarMateriasDocente));
             this.combo_grupos = new System.Windows.Forms.ComboBox();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.listaMaterias1 = new System.Windows.Forms.CheckedListBox();
+            this.pictureBox1_cerrar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1_cerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // combo_grupos
@@ -56,16 +59,30 @@
             this.listaMaterias1.Size = new System.Drawing.Size(360, 229);
             this.listaMaterias1.TabIndex = 2;
             // 
+            // pictureBox1_cerrar
+            // 
+            this.pictureBox1_cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1_cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1_cerrar.Image")));
+            this.pictureBox1_cerrar.Location = new System.Drawing.Point(379, 12);
+            this.pictureBox1_cerrar.Name = "pictureBox1_cerrar";
+            this.pictureBox1_cerrar.Size = new System.Drawing.Size(49, 47);
+            this.pictureBox1_cerrar.TabIndex = 32;
+            this.pictureBox1_cerrar.TabStop = false;
+            // 
             // asignarMateriasDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(440, 450);
+            this.Controls.Add(this.pictureBox1_cerrar);
             this.Controls.Add(this.listaMaterias1);
             this.Controls.Add(this.txt_buscar);
             this.Controls.Add(this.combo_grupos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "asignarMateriasDocente";
             this.Text = "asignarMateriasDocente";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1_cerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -75,5 +92,6 @@
         public System.Windows.Forms.TextBox txt_buscar;
         public System.Windows.Forms.ComboBox combo_grupos;
         public System.Windows.Forms.CheckedListBox listaMaterias1;
+        private System.Windows.Forms.PictureBox pictureBox1_cerrar;
     }
 }

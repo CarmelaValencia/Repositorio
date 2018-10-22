@@ -207,6 +207,7 @@
             this.btn_asignar.Text = "ASIGNAR MATERIA";
             this.btn_asignar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_asignar.UseVisualStyleBackColor = false;
+            this.btn_asignar.Click += new System.EventHandler(this.btn_asignar_Click);
             // 
             // docentes
             // 

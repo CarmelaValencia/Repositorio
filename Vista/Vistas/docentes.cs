@@ -3,12 +3,14 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using Vista.ControlVistas;
+using Vista.Vistas;
 
 namespace documentosEstadia1._1
 {
     public partial class docentes : Form
     {
         agregardocentes agd;
+        asignarMateriasDocente amd;
         public docentes()
         {
             InitializeComponent();
@@ -32,6 +34,7 @@ namespace documentosEstadia1._1
         {
             ControlVistaDocente.opcion = "Registrar";
             flowLayoutPanel1.Controls.Remove(agd);
+            flowLayoutPanel1.Controls.Remove(amd);
             flowLayoutPanel1.Visible = true;
             agd = new agregardocentes(flowLayoutPanel1, -1);
             ControlVistaDocente.cargarValores(agd);
@@ -71,6 +74,23 @@ namespace documentosEstadia1._1
         {
             frm.Width = flowLayoutPanel1.Width - 10;
             frm.Height = flowLayoutPanel1.Height - 10;
+        }
+
+        private void btn_asignar_Click(object sender, EventArgs e)
+        {
+            ControlVistaDocente.opcion = "Asignar";
+            flowLayoutPanel1.Controls.Remove(agd);
+            flowLayoutPanel1.Controls.Remove(amd);
+            flowLayoutPanel1.Visible = true;
+            amd = new asignarMateriasDocente(flowLayoutPanel1);
+            //ControlVistaDocente.cargarValores(amd);
+            //agd.labelOpcion.Text = "ASIGNAR MATERIA";
+            amd.TopLevel = false;
+            amd.Visible = true;
+            flowLayoutPanel1.Width = this.Width;
+            flowLayoutPanel1.Height = this.Height;
+            flowLayoutPanel1.Controls.Add(amd);
+            asignarTamanioVentanaResponsivo(amd);
         }
     }
 }

@@ -13,11 +13,13 @@ namespace Vista.Vistas
 {
     public partial class asignarMateriasDocente : Form
     {
-        public asignarMateriasDocente()
+        FlowLayoutPanel flpo;
+        public asignarMateriasDocente(FlowLayoutPanel flp)
         {
             InitializeComponent();
             ControlVistaMateriasDocentes control = new ControlVistaMateriasDocentes();
             control.llenarCombo(this);
+            flpo = flp;
         }
     }
 }
