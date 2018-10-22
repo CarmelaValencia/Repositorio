@@ -215,8 +215,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(577, 285);
-            this.Controls.Add(this.btn_asignar);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.btn_asignar);
             this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_agregar);
