@@ -7,6 +7,7 @@ namespace Vista.Vistas
     public partial class grupos : Form
     {
         agregargrupos agg;
+        materias_grupo mtg;
         public grupos()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace Vista.Vistas
         {
             ControlVistaGrupo.opcion = "Registrar";
             flowLayoutPanel1.Controls.Remove(agg);
+            flowLayoutPanel1.Controls.Remove(mtg);
             agg = new agregargrupos(flowLayoutPanel1);
             ControlVistaGrupo.cargarValores(agg);
             agg.labelOpcion.Text = "AGREGAR GRUPO";
@@ -37,7 +39,7 @@ namespace Vista.Vistas
 
         private void flowLayoutPanel1_Resize(object sender, System.EventArgs e)
         {
-            asignarTamanioVentanaResponsivo(agg);
+            //asignarTamanioVentanaResponsivo(agg);
         }
 
         public void asignarTamanioVentanaResponsivo(Form frm) {
@@ -49,6 +51,7 @@ namespace Vista.Vistas
         {
             ControlVistaGrupo.opcion = "Modificar";
             flowLayoutPanel1.Controls.Remove(agg);
+            flowLayoutPanel1.Controls.Remove(mtg);
             agg = new agregargrupos(flowLayoutPanel1);
             ControlVistaGrupo.obtenerSeleccion();
             ControlVistaGrupo.cargarValores(agg);
@@ -59,6 +62,24 @@ namespace Vista.Vistas
             flowLayoutPanel1.Height = this.Height;
             flowLayoutPanel1.Controls.Add(agg);
             asignarTamanioVentanaResponsivo(agg);
+            flowLayoutPanel1.Visible = true;
+        }
+
+        private void btn_asignar_Click(object sender, System.EventArgs e)
+        {
+            //ControlVistaGrupo.opcion = "ASIGNAR MATERIA";
+            flowLayoutPanel1.Controls.Remove(mtg);
+            flowLayoutPanel1.Controls.Remove(agg);
+            mtg = new materias_grupo(flowLayoutPanel1);
+            /*ControlVistaGrupo.obtenerSeleccion();
+            ControlVistaGrupo.cargarValores(mtg);*/
+            mtg.labelOpcion.Text = "ASIGNAR MATERIA AL GRUPO";
+            mtg.TopLevel = false;
+            mtg.Visible = true;
+            flowLayoutPanel1.Width = this.Width;
+            flowLayoutPanel1.Height = this.Height;
+            flowLayoutPanel1.Controls.Add(mtg);
+            asignarTamanioVentanaResponsivo(mtg);
             flowLayoutPanel1.Visible = true;
         }
     }
