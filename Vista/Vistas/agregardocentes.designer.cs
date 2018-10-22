@@ -153,10 +153,10 @@
             this.txt_nombre_docentes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_nombre_docentes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_nombre_docentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre_docentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombre_docentes.Location = new System.Drawing.Point(27, 42);
             this.txt_nombre_docentes.Name = "txt_nombre_docentes";
-            this.txt_nombre_docentes.Size = new System.Drawing.Size(219, 22);
+            this.txt_nombre_docentes.Size = new System.Drawing.Size(219, 19);
             this.txt_nombre_docentes.TabIndex = 7;
             this.txt_nombre_docentes.TabStop = false;
             // 
@@ -175,10 +175,10 @@
             this.txt_apellidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_apellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_apellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_apellidos.Location = new System.Drawing.Point(27, 42);
+            this.txt_apellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apellidos.Location = new System.Drawing.Point(27, 44);
             this.txt_apellidos.Name = "txt_apellidos";
-            this.txt_apellidos.Size = new System.Drawing.Size(219, 22);
+            this.txt_apellidos.Size = new System.Drawing.Size(219, 19);
             this.txt_apellidos.TabIndex = 12;
             this.txt_apellidos.TabStop = false;
             // 
@@ -254,10 +254,10 @@
             this.txt_numero_horas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_numero_horas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_numero_horas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_numero_horas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_numero_horas.Location = new System.Drawing.Point(27, 117);
             this.txt_numero_horas.Name = "txt_numero_horas";
-            this.txt_numero_horas.Size = new System.Drawing.Size(219, 25);
+            this.txt_numero_horas.Size = new System.Drawing.Size(219, 22);
             this.txt_numero_horas.TabIndex = 19;
             // 
             // pictureBox7
