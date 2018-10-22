@@ -18,8 +18,8 @@ namespace documentosEstadia1._1
         public Form1()
         {
             InitializeComponent();
-            button_docentes.BackColor = Color.Black;
-            button_docentes.FlatAppearance.MouseOverBackColor = Color.Black;
+            button_materias.BackColor = Color.Black;
+            button_materias.FlatAppearance.MouseOverBackColor = Color.Black;
             doc = new docentes();
             mat = new materias();
             grp = new grupos();

@@ -296,7 +296,7 @@
             this.button_docentes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_docentes.Image = ((System.Drawing.Image)(resources.GetObject("button_docentes.Image")));
             this.button_docentes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_docentes.Location = new System.Drawing.Point(-4, 54);
+            this.button_docentes.Location = new System.Drawing.Point(-4, 178);
             this.button_docentes.Name = "button_docentes";
             this.button_docentes.Size = new System.Drawing.Size(182, 63);
             this.button_docentes.TabIndex = 17;
@@ -336,7 +336,7 @@
             this.button_materias.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_materias.Image = ((System.Drawing.Image)(resources.GetObject("button_materias.Image")));
             this.button_materias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_materias.Location = new System.Drawing.Point(-4, 178);
+            this.button_materias.Location = new System.Drawing.Point(-4, 54);
             this.button_materias.Name = "button_materias";
             this.button_materias.Size = new System.Drawing.Size(182, 63);
             this.button_materias.TabIndex = 19;
