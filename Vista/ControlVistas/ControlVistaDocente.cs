@@ -22,6 +22,7 @@ namespace Vista.ControlVistas
             rellenarTabla();
             vistaDocenteObj.btn_eliminar.Click += new EventHandler(btn_Delete);
             vistaDocenteObj.txt_buscar.TextChanged += new EventHandler(buscando);
+            ControlCamposVacios.soloLetrasTxtBox(vistaDocenteObj.txt_buscar);
         }
         
         public static void cargarValores(agregardocentes vistaAgregar)
@@ -29,6 +30,8 @@ namespace Vista.ControlVistas
             vistaAgregarObj = vistaAgregar;
             vistaAgregar.btn_aceptar.Click += new EventHandler(btn_aceptar);
             vistaAgregar.btn_cancelar.Click += new EventHandler(btn_cancelar);
+            ControlCamposVacios.soloLetrasTxtBox(vistaAgregarObj.txt_apellidos);
+            ControlCamposVacios.soloLetrasTxtBox(vistaAgregarObj.txt_nombre_docentes);
             if (opcion.Equals("Registrar"))
             {
                 mdloDocente = new ModeloDocente(0,"","",0,"HABILITADO");
