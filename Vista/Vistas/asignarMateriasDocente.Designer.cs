@@ -59,7 +59,7 @@
             this.listaMaterias1.FormattingEnabled = true;
             this.listaMaterias1.Location = new System.Drawing.Point(21, 100);
             this.listaMaterias1.Name = "listaMaterias1";
-            this.listaMaterias1.Size = new System.Drawing.Size(381, 199);
+            this.listaMaterias1.Size = new System.Drawing.Size(381, 274);
             this.listaMaterias1.TabIndex = 2;
             // 
             // pictureBox1_cerrar

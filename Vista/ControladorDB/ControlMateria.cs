@@ -44,10 +44,21 @@ namespace Controlador
             }
             return dt;
         }
-        public DataTable ListarMaterias(int idGrupo)
+
+        public void DesAsignarMaterias(int idSeleccionado, int materia, int docente)
+        {
+            databaseMateria.DesAsignarMaterias(idSeleccionado, materia, docente);
+        }
+
+        public void asignarMaterias(int idSeleccionado, int materia, int docente)
+        {
+            databaseMateria.AsignarMaterias(idSeleccionado,materia,docente);
+        }
+
+        public DataTable ListarMaterias(int idGrupo,int idDocente)
         {
             DataTable dataTable = new DataTable();
-            SQLiteDataAdapter da = databaseMateria.ListarMaterias(idGrupo);
+            SQLiteDataAdapter da = databaseMateria.ListarMaterias(idGrupo,idDocente);
             da.Fill(dataTable);
             return dataTable;
         }

@@ -68,6 +68,55 @@ namespace Database
             }
         }
 
+        public void DesAsignarMaterias(int grupo, int materia, int docente)
+        {
+            String query = "delete from docentes_materias where id_materiasf=@materia and id_gruposf=@grupo " +
+                " and id_docentesf=@docente";
+            try
+            {
+                cn = Conexion.Instance.Conectar();
+                if (cn != null)
+                {
+                    cn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand(query, cn);
+                    cmd.Parameters.AddWithValue("@materia", materia);
+                    cmd.Parameters.AddWithValue("@grupo", grupo);
+                    cmd.Parameters.AddWithValue("@docente", docente);
+                    cmd.ExecuteNonQuery();
+                    cn.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error:" + e.Message);
+            }
+        }
+
+        public void AsignarMaterias(int idSeleccionado, int materia, int docente)
+        {
+            String query = "insert into docentes_materias(id_docentesf,id_materiasf,id_gruposf) " +
+                " values(@docente,@materia,@grupo)";
+            try
+            {
+                cn = Conexion.Instance.Conectar();
+                if (cn != null)
+                {
+                    cn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand(query, cn);
+
+                    cmd.Parameters.AddWithValue("@docente", docente);
+                    cmd.Parameters.AddWithValue("@materia", materia);
+                    cmd.Parameters.AddWithValue("@grupo", idSeleccionado);
+                    cmd.ExecuteNonQuery();
+                    cn.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Mensaje Error: " + e.Message);
+            }
+        }
+
         public Boolean Actualizar(ModeloMateria modeloMateria)
         {
             String query = "update materias set nombre_materias=@nombre,total_horas=@total,horas_semana=@semana," +
@@ -106,9 +155,10 @@ namespace Database
                 " or ciclo like'%" + buscar + "%' ", cn);
             return da;
         }
-        public SQLiteDataAdapter ListarMaterias(int idGrupo) {
+        public SQLiteDataAdapter ListarMaterias(int idGrupo,int idDocente) {
             cn = Conexion.Instance.Conectar();
-            da = new SQLiteDataAdapter("select * from m_g where id_gruposf="+idGrupo+" ",cn);
+            da = new SQLiteDataAdapter("select * from m_g where id_gruposf="+idGrupo+" and id_materias " +
+                " not in(select id_materiasf from docentes_materias where id_gruposf="+idGrupo+" and id_docentesf!="+idDocente+") ",cn);
             return da;
         }
     }

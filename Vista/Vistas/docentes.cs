@@ -78,13 +78,11 @@ namespace documentosEstadia1._1
 
         private void btn_asignar_Click(object sender, EventArgs e)
         {
-            ControlVistaDocente.opcion = "Asignar";
             flowLayoutPanel1.Controls.Remove(agd);
             flowLayoutPanel1.Controls.Remove(amd);
             flowLayoutPanel1.Visible = true;
             amd = new asignarMateriasDocente(flowLayoutPanel1);
-            //ControlVistaDocente.cargarValores(amd);
-            //agd.labelOpcion.Text = "ASIGNAR MATERIA";
+            ControlVistaMateriasDocentes.iniciarDocentes(this,amd);
             amd.TopLevel = false;
             amd.Visible = true;
             flowLayoutPanel1.Width = this.Width;
