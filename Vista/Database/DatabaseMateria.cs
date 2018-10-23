@@ -161,5 +161,14 @@ namespace Database
                 " not in(select id_materiasf from docentes_materias where id_gruposf="+idGrupo+" and id_docentesf!="+idDocente+") ",cn);
             return da;
         }
+
+        public int BuscarAsignado(int idMateria,int idDocente, int idGrupo) {
+            DataTable datos = new DataTable();
+            cn = Conexion.Instance.Conectar();
+            da = new SQLiteDataAdapter("select docentes_materias.id_dm from docentes_materias " +
+                " where id_gruposf="+idGrupo+" and id_docentesf="+idDocente+" and id_materiasf="+idMateria+"", cn);
+            da.Fill(datos);
+            return datos.Rows.Count;
+        }
     }
 }

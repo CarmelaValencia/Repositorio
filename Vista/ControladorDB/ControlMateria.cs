@@ -62,5 +62,8 @@ namespace Controlador
             da.Fill(dataTable);
             return dataTable;
         }
+        public int BuscarAsignado(int idMateria,int idDocente,int idGrupo) {
+            return databaseMateria.BuscarAsignado(idMateria,idDocente,idGrupo);
+        }
     }
 }

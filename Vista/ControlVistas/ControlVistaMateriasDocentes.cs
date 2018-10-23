@@ -17,6 +17,7 @@ namespace Vista.ControlVistas
 
         public static int idSeleccionado=0;
         public static int idDocente = 0;
+        public static int cargando = 0;
         ControlGrupo controlGrupo = new ControlGrupo();
         ControlMateria controlMateria = new ControlMateria();
         public static asignarMateriasDocente asignar = null;
@@ -51,23 +52,27 @@ namespace Vista.ControlVistas
 
         private void lista_materias_selected_index(object sender, EventArgs e)
         {
-            int index = asignar.listaMaterias1.SelectedIndex;
-            int materia=listaIdMaterias[asignar.listaMaterias1.SelectedIndex];
-            if (asignar.listaMaterias1.GetItemChecked(index) == true)
-            {
-                //Desasignar materia al docente (grupo,materia,accion)
-                Console.WriteLine("iddocente:"+ ControlVistaMateriasDocentes.idDocente);
-                controlMateria.DesAsignarMaterias(idSeleccionado, materia, ControlVistaMateriasDocentes.idDocente);
-            }
-            else {
-                //Asignar materia al docente (grupo,materia,accion)
-                Console.WriteLine("iddocente:" + ControlVistaMateriasDocentes.idDocente);
-                controlMateria.asignarMaterias(idSeleccionado, materia, ControlVistaMateriasDocentes.idDocente);
+            if (cargando == 0) {
+                int index = asignar.listaMaterias1.SelectedIndex;
+                int materia = listaIdMaterias[asignar.listaMaterias1.SelectedIndex];
+                if (asignar.listaMaterias1.GetItemChecked(index) == true)
+                {
+                    //Desasignar materia al docente (grupo,materia,accion)
+                    Console.WriteLine("iddocente:" + ControlVistaMateriasDocentes.idDocente);
+                    controlMateria.DesAsignarMaterias(idSeleccionado, materia, ControlVistaMateriasDocentes.idDocente);
+                }
+                else
+                {
+                    //Asignar materia al docente (grupo,materia,accion)
+                    Console.WriteLine("iddocente:" + ControlVistaMateriasDocentes.idDocente);
+                    controlMateria.asignarMaterias(idSeleccionado, materia, ControlVistaMateriasDocentes.idDocente);
+                }
             }
         }
 
         private void combo_grupos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cargando = 1;
             asignar.listaMaterias1.Items.Clear();
             idSeleccionado =Int32.Parse(asignar.combo_grupos.SelectedValue.ToString());
             
@@ -79,7 +84,12 @@ namespace Vista.ControlVistas
                 DataRow fila = filas[i];
                 listaIdMaterias[i] = Int32.Parse(fila["id_materias"].ToString());
                 asignar.listaMaterias1.Items.Add(fila["nombre_materias"]);
+                if (controlMateria.BuscarAsignado(listaIdMaterias[i], ControlVistaMateriasDocentes.idDocente, idSeleccionado)>0) {
+                    //asignar.listaMaterias1.SetSelected(i, true);
+                    asignar.listaMaterias1.SetItemChecked(i,true);
+                }
             }
+            cargando = 0;
         }
         
     }
