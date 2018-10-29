@@ -41,7 +41,7 @@ namespace Vista.ControladorDB
             for (int i = 0; i < TablaAux.Rows.Count; i++)
             {
                 DataRow row = TablaAux.Rows[i];
-                dt.Rows.Add(row["semestre"], row["nombre_grupos"], row["area"], row["estado"]);
+                dt.Rows.Add(row["semestre"], row["nombre_grupos"], row["area"], row["turno"]);
             }
             return dt;
         }

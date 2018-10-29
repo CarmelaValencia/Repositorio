@@ -8,13 +8,13 @@ using System.Data;
 
 namespace Vista.ControlVistas
 {
-    class ControlVistaDocente
+    public class ControlVistaDocente
     {
         public static String opcion = "";
         public static agregardocentes vistaAgregarObj = null;
         public static DataTable tablaAux = new DataTable();
         public static docentes vistaDocenteObj = null;
-        public static ModeloDocente mdloDocente = null;
+        static ModeloDocente mdloDocente = null;
         static ControlDocente controlDocente = new ControlDocente();
         public void iniciarDocentes(docentes docentes)
         {

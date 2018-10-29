@@ -1,5 +1,7 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
+using Vista.ControladorDB;
 using Vista.Vistas;
 
 namespace documentosEstadia1._1
@@ -182,7 +184,36 @@ namespace documentosEstadia1._1
 
         private void button_generar_horario_Click(object sender, System.EventArgs e)
         {
-
+            ControlGenerador controlGenerador = new ControlGenerador();
+            string [] grupoDatos=controlGenerador.BuscarSiguienteGrupo();
+            string [] dias  = { "LUNES", "MARTES", "MIERCOLES", "JUEVES", "VIERNES" };
+                
+            int materiaId = 0;//Se almacenará el id de la materia
+            int docenteId = 0;//Se almacenará el id del docente
+            do
+            {
+                if (!grupoDatos[0].Equals("0"))
+                {
+                    int[] horas = controlGenerador.BuscarHoras(grupoDatos[1]);
+                    for (int i = 0; i < dias.Length; i++)
+                    {
+                        for (int y = 0; y < horas.Length; y++)
+                        {
+                            materiaId = controlGenerador.ObtenerMateria(int.Parse(grupoDatos[0]), dias[i]);
+                            docenteId = controlGenerador.ObtenerDocente(materiaId, int.Parse(grupoDatos[0]), dias[i], horas[y]);
+                            if (materiaId > 0 && docenteId > 0)
+                            {
+                                controlGenerador.Guardar(dias[i], horas[y], docenteId, materiaId, int.Parse(grupoDatos[0]));
+                                Console.WriteLine("GRUPO:" + grupoDatos[0] + ":DIA:" + dias[i] +
+                                    ":HORA:" + horas[y] + ":MATERIA:" + materiaId + ":DOCENTE" + docenteId);
+                            }
+                        }
+                    }
+                }
+                
+                grupoDatos=controlGenerador.BuscarSiguienteGrupo();
+            } while (!grupoDatos[0].Equals("0"));
+            
         }
     }
 }
